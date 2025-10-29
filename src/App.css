@@ -1,0 +1,132 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9fb;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav button {
+  margin-right: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+nav button:hover {
+  background-color: #e2e6ea;
+}
+
+/* Cart dropdown */
+.cart-container {
+  position: relative;
+}
+
+.cart-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-dropdown {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  width: 180px;
+  padding: 8px 0;
+  z-index: 100;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+}
+
+.cart-item button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background-color: #c0392b;
+}
+
+/* Product grid */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: start;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+.product-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.product-card p {
+  margin: 4px 0;
+}
+
+.product-card button {
+  margin-top: 10px;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+}
+
+.product-card button.add {
+  background-color: #007bff;
+}
+
+.product-card button.remove {
+  background-color: #e74c3c;
+}
