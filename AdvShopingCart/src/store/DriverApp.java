@@ -40,11 +40,11 @@ public class DriverApp {
                         System.out.println("Invalid option.");
                 }
             } catch (StockException e) {
-                // Handling the custom exception 
+            
                 System.out.println("Error: " + e.getMessage());
             } catch (Exception e) {
                 System.out.println("Invalid Input.");
-                sc.nextLine(); // clear buffer
+                sc.nextLine(); 
             }
         }
     }

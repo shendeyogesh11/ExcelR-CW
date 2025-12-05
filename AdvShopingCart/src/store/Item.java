@@ -29,13 +29,11 @@ public class Item implements Comparable<Item> {
 
     @Override
     public String toString() {
-        // Matches Sample Output: Name xQty: Price (Discount)
         return String.format("%s x%d: ₹%.2f%s", name, quantity, getTotalPrice(), appliedDiscount);
     }
 
     @Override
     public int compareTo(Item o) {
-        // Sorts by Total Price (Ascending)
         return Double.compare(this.getTotalPrice(), o.getTotalPrice());
     }
 }
