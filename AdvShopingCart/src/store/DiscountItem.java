@@ -6,6 +6,7 @@ public class DiscountItem implements Comparable<DiscountItem> {
     private double percentage;
 
     public DiscountItem(String discountName, double percentage) {
+    	
         this.discountName = discountName;
         this.percentage = percentage;
     }

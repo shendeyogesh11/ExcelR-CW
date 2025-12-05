@@ -9,6 +9,7 @@ public class Item implements Comparable<Item> {
     private String appliedDiscount = ""; 
 
     public Item(String id, String name, double price, int quantity) {
+    	
         this.id = id;
         this.name = name;
         this.price = price;
@@ -29,11 +30,13 @@ public class Item implements Comparable<Item> {
 
     @Override
     public String toString() {
+    	
         return String.format("%s x%d: ₹%.2f%s", name, quantity, getTotalPrice(), appliedDiscount);
     }
 
     @Override
     public int compareTo(Item o) {
+    	
         return Double.compare(this.getTotalPrice(), o.getTotalPrice());
     }
 }

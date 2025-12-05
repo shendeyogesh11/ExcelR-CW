@@ -32,11 +32,13 @@ public class ShoppingCart {
     }
 
     public void displayInventory() {
+    	
         System.out.println("\n Sorted Inventory (By Price)");
        
         for (Double price : inventory.keySet()) {
             System.out.println( price + " - " + inventory.get(price));
         }
+        
     }
 
     public void addToCart(Double priceKey, int quantity) throws StockException {
@@ -67,7 +69,9 @@ public class ShoppingCart {
         System.out.println("Added to cart.");
     }
 
+    
     public void viewCartAndCheckout() {
+    	
         if (cart.isEmpty()) {
             System.out.println("Cart is empty.");
             return;
@@ -86,6 +90,7 @@ public class ShoppingCart {
         System.out.println("Total: " + String.format("%.2f", finalTotal));
         
         PaymentProcessor.processPayment(finalTotal);
+        
         cart.clear(); 
     }
 }
